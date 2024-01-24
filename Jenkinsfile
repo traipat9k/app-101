@@ -15,7 +15,7 @@ pipeline {
 
         stage("Build Application"){
             steps {
-				app = docker.build("devops/hello")
+				sh 'docker build -t shanem/spring-petclinic:latest .'
             }
 
        }
