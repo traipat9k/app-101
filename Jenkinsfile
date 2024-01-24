@@ -24,7 +24,7 @@ pipeline {
            steps {
                 withCredentials([usernamePassword(credentialsId: ‘docker-hub’, usernameVariable: ‘DOCKER_USERNAME’, passwordVariable: ‘DOCKER_PASSWORD’)]) {
 				sh ‘docker login -u $DOCKER_USERNAME -p $DOCKER_PASSWORD’
-				sh ‘docker push traipatk/staticsite:1.0’
+				;sh ‘docker push traipatk/staticsite:1.0’
            }
        }
     }
